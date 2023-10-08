@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { ProductosModule } from './productos/productos.module';
 import { CategoriaProductosModule } from './categoria-productos/categoria-productos.module';
 import { AppService } from './app.service';
+import { UsuarioModule } from './usuario/usuario.module';
 
 
 @Module({
@@ -21,7 +22,8 @@ import { AppService } from './app.service';
       synchronize: true,
     }),
     ProductosModule,
-    CategoriaProductosModule
+    CategoriaProductosModule,
+    UsuarioModule
   ],
   controllers: [AppController],
   providers: [AppService],
