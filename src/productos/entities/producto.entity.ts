@@ -15,7 +15,7 @@ import {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ name: 'id_categoria_productos_foreing_key'}) 
+    @Column({ name: 'fk_categoria_producto_id'}) 
     idCategoriaProductos: number;
   
     @Column({ length: 50 })
@@ -26,6 +26,12 @@ import {
 
     @Column('decimal', { precision: 10, scale: 2 })
     precio: number;
+
+    @Column({ length: 255, nullable: true})
+    imagen: string | null;
+
+    @Column({ name: 'stock'}) 
+    stock: number;
     
     @CreateDateColumn({ name: 'fecha_creacion' })
     fechaCreacion: Date;
@@ -34,7 +40,7 @@ import {
     fechaModificacion: Date;
 
     @ManyToOne(() => CategoriaProductoEntity, (categoriaProducto) => categoriaProducto.productos)
-    @JoinColumn({ name: 'id_categoria_productos_foreing_key', referencedColumnName: 'id' })
+    @JoinColumn({ name: 'fk_categoria_producto_id', referencedColumnName: 'id' })
     categoriaProducto: CategoriaProductoEntity;
       
   }
