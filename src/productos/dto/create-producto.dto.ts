@@ -4,5 +4,6 @@ export class CreateProductoDto {
     readonly descripcion: string;
     readonly precio: number;
     readonly stock: number;
-
+    readonly codigoProducto: number;
+    readonly estado: boolean;
 }

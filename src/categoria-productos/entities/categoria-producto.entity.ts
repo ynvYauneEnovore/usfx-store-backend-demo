@@ -11,6 +11,12 @@ export class CategoriaProductoEntity {
   @Column()
   nombre: string;
 
+  @Column({default: true})
+  estado: boolean;
+
+  @Column({ length: 100 })
+  descripcion: string;
+
   @OneToMany(() => ProductoEntity, (producto) => producto.categoriaProducto)
   productos: ProductoEntity[];
 }

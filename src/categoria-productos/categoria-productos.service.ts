@@ -15,7 +15,10 @@ export class CategoriaProductosService {
 
   async create(createCategoriaProductoDto: CreateCategoriaProductoDto): Promise<CategoriaProductoEntity> {
     return this.repository.save({
-      nombre: createCategoriaProductoDto.nombre.trim()
+      nombre: createCategoriaProductoDto.nombre.trim(),
+      estado: createCategoriaProductoDto.estado,
+      descripcion: createCategoriaProductoDto.descripcion.trim()
+
     });
   }
 

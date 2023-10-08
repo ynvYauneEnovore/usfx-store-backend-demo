@@ -17,6 +17,9 @@ import {
 
     @Column({ name: 'fk_categoria_producto_id'}) 
     idCategoriaProductos: number;
+
+    @Column({name: 'codigo_producto'})
+    codigoProducto: number;
   
     @Column({ length: 50 })
     nombre: string;
@@ -32,6 +35,9 @@ import {
 
     @Column({ name: 'stock'}) 
     stock: number;
+
+    @Column({default: true})
+    estado: boolean;
     
     @CreateDateColumn({ name: 'fecha_creacion' })
     fechaCreacion: Date;

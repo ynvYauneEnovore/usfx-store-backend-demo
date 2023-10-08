@@ -18,6 +18,8 @@ export class ProductosService {
       descripcion: createProductoDto.descripcion.trim(),
       precio: createProductoDto.precio,
       stock: createProductoDto.stock,
+      estado: createProductoDto.estado,
+      codigoProducto: createProductoDto.codigoProducto,
     });
   }
 
