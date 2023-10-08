@@ -20,8 +20,8 @@ export class ProductosService {
     });
   }
 
-  findAll() {
-    return `This action returns all productos`;
+  async findAll(): Promise<ProductoEntity[]> {
+    return this.repository.find({ relations: { categoriaProducto: true } });
   }
 
   findOne(id: number) {

@@ -19,8 +19,8 @@ export class CategoriaProductosService {
     });
   }
 
-  findAll() {
-    return `This action returns all categoriaProductos`;
+  async findAll(): Promise<CategoriaProductoEntity[]> {
+    return this.repository.find();
   }
 
   findOne(id: number) {
