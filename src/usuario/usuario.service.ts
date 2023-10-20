@@ -27,8 +27,8 @@ export class UsuarioService {
     });
   }
 
-  findAll() {
-    return `This action returns all usuario`;
+  async findAll(): Promise<UsuarioEntity[]> {
+    return this.repository.find();
   }
 
   findOne(id: number) {
