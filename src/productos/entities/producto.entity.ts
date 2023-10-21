@@ -18,7 +18,7 @@ import {
     @Column({ name: 'fk_categoria_producto_id'}) 
     idCategoriaProductos: number;
 
-    @Column({name: 'codigo_producto'})
+    @Column({name: 'codigo_producto', unique: true})
     codigoProducto: number;
   
     @Column({ length: 50 })
